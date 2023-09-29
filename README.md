@@ -34,6 +34,11 @@ To run the test, follow these steps:
 1. Install [Deno](https://deno.com/) if you do not have it already.
 1. Run `deno test --allow-env --allow-read --allow-net`.
 
+> **NOTE**
+>
+> The tests make API calls to GitHub. If you start hitting rate limits, try setting a personal access token on the
+> environment variable `GITHUB_API_TOKEN`.
+
 ### CI/CD with GitHub Actions
 
 This template also includes a sample CI/CD workflow based on GitHub Actions in the [.github/workflows
