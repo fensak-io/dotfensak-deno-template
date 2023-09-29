@@ -23,5 +23,11 @@ function main(inp: IPatch[]): boolean {
   }
 
   const patch = inp[0];
-  return patch.path === "README.md"
+  const approve = patch.path === "README.md"
+  if (approve) {
+    console.log("Approving since only README.md was updated.");
+  } else {
+    console.log("Rejecting since file changed was not README.md.");
+  }
+  return approve
 }
