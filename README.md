@@ -4,6 +4,8 @@ Use this template to create a `.fensak` repository in your Organization with a r
 writing and testing rules. Feel free to clone this repo and make any modifications necessary to get up and running with
 Fensak.
 
+Check out our [Getting started guide](https://docs.fensak.io/docs/getting-started/).
+
 
 ## What's included
 
@@ -18,10 +20,15 @@ should give you a basic starting point for navigating the patch object provided 
 For more example rules, checkout
 [fensak-io/fensak-rules-examples](https://github.com/fensak-io/fensak-rules-examples).
 
+Also check out our [Writing rules scripts guide](https://docs.fensak.io/docs/writing-rules/).
+
 ### Sample config
 
 A sample [fensak.yml](/fensak.yml) config file is provided for your convenience. The config file maps a single fictional
 repository in your Organization (`my-repo`) against the sample rule, [rules/sample.ts](/rules/sample.ts).
+
+Check out our [Config file reference](https://docs.fensak.io/docs/config-reference/) for an overview of the Fensak
+config file.
 
 ### Tests
 
