@@ -53,3 +53,9 @@ folder](/.github/workflows). The GitHub Actions workflow will:
 1. Remove the [LICENSE](/LICENSE) file and replace it with your own.
 1. Add and define your own rules in the [rules folder](/rules).
 1. Update this README to suit your needs.
+
+
+## Questions or Feedback
+
+If you have any questions, concerns, or feedback pertaining to this repository or Fensak in general, please start a
+discussion on the [Fensak GitHub Discussions forum](https://github.com/orgs/fensak-io/discussions).
