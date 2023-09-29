@@ -19,7 +19,7 @@ const octokit = new Octokit({
 });
 const testRepo: IGitHubRepository = {
   owner: "fensak-io",
-  name: "dotgithub-template",
+  name: "dotfensak-template",
 };
 const opts = { logMode: RuleLogMode.Console };
 
