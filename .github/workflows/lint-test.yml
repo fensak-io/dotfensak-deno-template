@@ -1,0 +1,46 @@
+# A sample CI/CD workflow for Fensak rules. This workflow will:
+# - Check if the code is formatted properly using `deno fmt`.
+# - Lint the code using `deno lint`.
+# - Run the tests using `deno test` and output a junit report.
+# - Process the junit report and upload to GitHub Actions so that it can be viewed.
+
+name: lint-test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  checks: write
+  contents: read
+
+jobs:
+  # Run linter and tests against Fensak rules
+  linttest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+
+      - uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31 # v1.1.2
+        with:
+          deno-version: v1.37.1
+
+      - name: fmt
+        run: deno fmt --check
+
+      - name: lint
+        run: deno lint
+
+      - name: test
+        run: deno test --allow-env --allow-read --allow-net --reporter=junit --junit-path=./report.xml
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: report
+        uses: mikepenz/action-junit-report@75b84e78b3f0aaea7ed7cf8d1d100d7f97f963ec # v4.0.0
+        if: always()
+        with:
+          report_paths: "report.xml"
+          check_name: "deno test report"
