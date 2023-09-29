@@ -30,7 +30,7 @@ Deno.test("No changes should be approved", async () => {
 
 Deno.test("Changes only to README should be approved", async () => {
   // View PR at
-  // https://github.com/fensak-io/dotgithub-template/pull/1
+  // https://github.com/fensak-io/dotfensak-template/pull/1
   const patches = await patchFromGitHubPullRequest(octokit, testRepo, 1);
   const result = await runRule(ruleFn, patches.patchList, opts);
   assert(result.approve);
@@ -38,7 +38,7 @@ Deno.test("Changes only to README should be approved", async () => {
 
 Deno.test("Changes to non-README files should be rejected", async () => {
   // View PR at
-  // https://github.com/fensak-io/dotgithub-template/pull/2
+  // https://github.com/fensak-io/dotfensak-template/pull/2
   const patches = await patchFromGitHubPullRequest(octokit, testRepo, 2);
   const result = await runRule(ruleFn, patches.patchList, opts);
   assert(!result.approve);
@@ -46,8 +46,8 @@ Deno.test("Changes to non-README files should be rejected", async () => {
 
 Deno.test("Change containing more than one file should be rejected", async () => {
   // View PR at
-  // https://github.com/fensak-io/dotgithub-template/pull/3
-  const patches = await patchFromGitHubPullRequest(octokit, testRepo, 3);
+  // https://github.com/fensak-io/dotfensak-template/pull/4
+  const patches = await patchFromGitHubPullRequest(octokit, testRepo, 4);
   const result = await runRule(ruleFn, patches.patchList, opts);
   assert(!result.approve);
 });
