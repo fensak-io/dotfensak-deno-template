@@ -62,6 +62,12 @@ folder](/.github/workflows). The GitHub Actions workflow will:
 1. Create a new repo against this template on GitHub. Refer to [the official
    documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
    for more details on using template repositories.
+1. Wait for the `bootstrap` [GitHub Actions](https://docs.github.com/en/actions) job to run. Remove the following files
+   if you have GitHub Actions disabled on new repos in your Org:
+     1. `LICENSE`
+     1. `SECURITY.md`
+     1. `.github/workflows/bootstrap.yml`
+
 1. Add and define your own rules in the [rules folder](/rules).
 1. Update this README to suit your needs.
 
