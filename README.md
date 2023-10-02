@@ -62,7 +62,6 @@ folder](/.github/workflows). The GitHub Actions workflow will:
 1. Create a new repo against this template on GitHub. Refer to [the official
    documentation](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
    for more details on using template repositories.
-1. Remove the [LICENSE](/LICENSE) file and replace it with your own.
 1. Add and define your own rules in the [rules folder](/rules).
 1. Update this README to suit your needs.
 
