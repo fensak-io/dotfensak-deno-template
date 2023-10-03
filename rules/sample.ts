@@ -4,9 +4,7 @@
  */
 
 // fensak remove-start
-import type {
-  IPatch,
-} from "https://raw.githubusercontent.com/fensak-io/fensak/v0.0.2/patch/patch_types.ts";
+import type { IPatch } from "npm:@fensak-io/reng@^1.0.7";
 // fensak remove-end
 
 // deno-lint-ignore no-unused-vars
@@ -23,11 +21,11 @@ function main(inp: IPatch[]): boolean {
   }
 
   const patch = inp[0];
-  const approve = patch.path === "README.md"
+  const approve = patch.path === "README.md";
   if (approve) {
     console.log("Approving since only README.md was updated.");
   } else {
     console.log("Rejecting since file changed was not README.md.");
   }
-  return approve
+  return approve;
 }
