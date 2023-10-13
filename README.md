@@ -1,8 +1,8 @@
-# Template for .fensak repositories
+# Deno template for .fensak repositories
 
-Use this template to create a `.fensak` repository in your Organization with a recommended project configuration for
-writing and testing rules. Feel free to clone this repo and make any modifications necessary to get up and running with
-Fensak.
+Use this template to create a [Deno](https://deno.com/) based `.fensak` repository in your Organization with a
+recommended project configuration for writing and testing rules. Feel free to clone this repo and make any modifications
+necessary to get up and running with Fensak.
 
 Check out our [Getting started guide](https://docs.fensak.io/docs/getting-started/).
 
