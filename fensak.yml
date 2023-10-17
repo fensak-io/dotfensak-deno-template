@@ -16,11 +16,11 @@ repos:
 
     # The following attribute is optional. When omitted, the rule language is automatically determined based on the rule
     # file extension. Refer to the schema for the list of allowed values here.
-    ruleLang: ts
+    # ruleLang: ts
 
-    # The following attribute is optional. This setting controls how many reviews should be required for PRs where the
+    # The following attribute is optional. This setting controls how many approvals should be required for PRs where the
     # rule does not pass. The default is 1.
-    requiredReviews: 1
+    # requiredApprovals: 1
 
   # You can add more repositories by extending the repos map with more entries like so:
   #
