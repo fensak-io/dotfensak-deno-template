@@ -4,11 +4,11 @@
  */
 
 // fensak remove-start
-import type { IPatch } from "npm:@fensak-io/reng@^1.0.7";
+import type { IChangeSetMetadata, IPatch } from "npm:@fensak-io/reng@^1.1.2";
 // fensak remove-end
 
 // deno-lint-ignore no-unused-vars
-function main(inp: IPatch[]): boolean {
+function main(inp: IPatch[], _metadata: IChangeSetMetadata): boolean {
   const numPatches = inp.length;
   if (numPatches == 0) {
     // No files updated, so approve.
