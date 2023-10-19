@@ -4,7 +4,7 @@
  */
 
 // fensak remove-start
-import type { IChangeSetMetadata, IPatch } from "npm:@fensak-io/reng@^1.1.2";
+import type { IChangeSetMetadata, IPatch } from "npm:@fensak-io/reng@^1.2.1";
 // fensak remove-end
 
 // deno-lint-ignore no-unused-vars
